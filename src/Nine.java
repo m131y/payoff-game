@@ -10,6 +10,8 @@ public class Nine implements Player{
     public boolean cooperate(int round) {
         if(round == 1) {
             return false;
+        } else if (round == 10) {
+            return false;
         }
         return opponentHistory[round-2]; //round는 1~10, index는 0~9
     }
