@@ -8,12 +8,12 @@ public class Main {
         int rounds = 10;
 
         Player playerA = new Nine(rounds);
-        Player playerB = new B();
+        Player playerB = new TitForTat(rounds);
 
         int totalA = 0;
         int totalB = 0;
 
-        for (int round = 1; round < rounds; round++) {
+        for (int round = 1; round <= rounds; round++) {
             boolean choiceA = playerA.cooperate(round);
             boolean choiceB = playerB.cooperate(round);
 
